@@ -10,14 +10,14 @@
 
 */
 
-.back-ground{
+.my-back-ground{
     border: 1px solid red;
     /* test */
     max-width: 1200px;
     height: 100vh;
 }
 
-.container{
+.my-container{
     border: 1px solid black;
     height: 600px;
 
@@ -41,7 +41,7 @@ NAVBAR
 
 */
 
-.navbar{
+.my-navbar{
     width: 100%;
 
     background-color: #EAEAEA;
@@ -50,7 +50,7 @@ NAVBAR
 
 }
 
-.navbar .nav-left{
+.my-navbar .my-nav-left{
     border: 1px solid black;
     height: 50px;
     /* test */
@@ -59,7 +59,7 @@ NAVBAR
     width: 35%;
 }
 
-.navbar .nav-right{
+.my-navbar .my-nav-right{
     border: 1px solid black;
     height: 50px;
 
@@ -74,6 +74,17 @@ NAVBAR
  FINE NAVBAR
 
 */
+/* classi da riutilizzare */
+.user-padding{
+    padding: 5px 10px;
+}
+
+.my-color-icon{
+    color: #B1B1B1;
+}
+
+
+/* classi da riutilizzare */
 
 /* 
 
@@ -98,7 +109,8 @@ MAIN
 
 /* side bar */
 
-.side-bar{
+
+.my-side-bar{
     border: 1px solid black;
     height: 50px;
     height: 550px;
@@ -124,8 +136,14 @@ li{
 
 /* fine side bar */
 
+/* 
 
-.main-block{
+Main chat
+
+*/
+
+
+.my-main-block{
     border: 1px solid black;
     height: 50px;
     height: 550px;
@@ -133,6 +151,23 @@ li{
     /* test */
 
     width: 65%;
+}
+
+
+
+.my-high-vh{
+    height: calc(100vh - 64px);
+}
+
+
+
+
+.my-user-input-bg{
+    background-color: #F2EEEA;
+}
+
+.my-bg-user-chat{
+    background: url(../img/mine.jpg);
 }
 
 

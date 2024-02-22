@@ -11,7 +11,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.png',
+                    avatar: './img/avatar_1.jng',
                     visible: true,
                     messages: [
                         {
