@@ -64,24 +64,27 @@
                 <div class="main">
 
                     <div class="my-side-bar">
-                        <div class="notice grandezza-test">
+
+                        <div class="notice p-2 my-bg-notice">
+                            <i class="fa-regular fa-bell-slash fs-5 text-white border rounded-5 p-2 "></i>
 
                         </div>
+
                         <div class="my-search-bar p-2">
                             <div class="input-group">
                                 <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
                                         class="fa-solid fa-magnifying-glass"></i></button>
-                                <input type="text" class="form-control" placeholder=""
+                                <input type="text" class="form-control" placeholder="Cerca o inizia un nuova chat"
                                     aria-label="Example text with button addon" aria-describedby="button-addon1">
                             </div>
                         </div>
                         <div class="contacts grandezza-test">
                             <ul class="p-0">
-                                <li class="grandezza-test user-padding bg-white "
+                                <li class="  d-flex align-items-center border-bottom user-padding bg-white "
                                     v-for="(currentUser, indexUser) in contacts">
-                                    <span>
-                                        <img :src="currentUser.avatar" alt="">
-                                    </span>
+                                    
+                                    <img :src="currentUser.avatar" alt="" class="">
+                                    
 
                                     {{currentUser.name}}
 
@@ -101,7 +104,7 @@
 
                             <i class="fa-regular fa-face-smile my-color-icon p-4"></i>
 
-                            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                            <input class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
 
                             <i class="fa-solid fa-microphone my-color-icon p-4"></i>
 
