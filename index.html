@@ -30,11 +30,13 @@
 
             <div class="my-container">
 
-                <div class="my-navbar ">
+                <div class="my-navbar  ">
 
-                    <div class="my-nav-left d-flex justify-content-between align-items-center ">
-                        <div>
-                            michele
+                    <div class="my-nav-left d-flex justify-content-between align-items-center p-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="img/avatar_1.jpg" alt="">
+                            <div>Michele</div>
+                            
                         </div>
 
 
@@ -45,9 +47,10 @@
                             <i class="fa-solid fa-ellipsis-vertical p-2 my-color-icon"></i>
                         </span>
                     </div>
-                    <div class="my-nav-right d-flex justify-content-between align-items-center">
-                        <div>
-                            michele
+                    <div class="my-nav-right d-flex justify-content-between align-items-center p-2">
+                        <div class="d-flex align-items-center gap-2" >
+                            <img src="img/avatar_1.jpg" alt="">
+                            <div>Michele</div>
                         </div>
 
                         <span class="p-2">
@@ -63,10 +66,15 @@
                 </div>
                 <div class="main">
 
-                    <div class="my-side-bar">
+                    <div class="my-side-bar bg-white ">
 
-                        <div class="notice p-2 my-bg-notice">
+                        <div class="notice p-2 my-bg-notice d-flex gap-2">
                             <i class="fa-regular fa-bell-slash fs-5 text-white border rounded-5 p-2 "></i>
+                            <div>
+                                <div><strong>Ricevi notifiche di messaggi</strong></div>
+                                <div class="text-decoration-underline"> Attiva Notifiche desktop</div>
+                            </div>
+
 
                         </div>
 
@@ -78,15 +86,22 @@
                                     aria-label="Example text with button addon" aria-describedby="button-addon1">
                             </div>
                         </div>
-                        <div class="contacts grandezza-test">
+                        <div class="contacts ">
                             <ul class="p-0">
-                                <li class="  d-flex align-items-center border-bottom user-padding bg-white "
+                                <li class=" gap-3  d-flex align-items-center justify-content-between  border-bottom user-padding bg-white "
                                     v-for="(currentUser, indexUser) in contacts">
                                     
                                     <img :src="currentUser.avatar" alt="" class="">
                                     
+                                    <div>
+                                        {{currentUser.name}}
+                                        <p><i>Ultimo messaggio mandato</i></p>
+                                        
+                                    </div>
+                                    <div>
+                                        20.30
+                                    </div>
 
-                                    {{currentUser.name}}
 
                                 </li>
 
@@ -95,8 +110,27 @@
 
 
                     </div>
-                    <div class="my-main-block d-flex flex-column justify-content-between ">
-                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat ">
+                    <div class="my-main-block d-flex flex-column justify-content-between  ">
+                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 ">
+
+                            <div class="my-message d-flex justify-content-end me-3">
+                                <div class="my-answear bg-my-answear p-3 rounded-3  ">
+                                    <div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="your-message d-flex justify-content-start ms-3 ">
+                                <div class="your-answear bg-your-answear p-3 rounded-3 ">
+                                    <div>
+                                        Anvedi da quanto tempo
+
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
 

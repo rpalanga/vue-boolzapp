@@ -18,8 +18,8 @@
 }
 
 .my-container{
-    /* border: 1px solid black; */
-    height: 600px;
+    
+    height: 700px;
 
     /* test */
 
@@ -53,20 +53,18 @@ NAVBAR
 .my-navbar .my-nav-left{
     border: 1px solid rgba(000, 000, 000, 0.4);
 
-    /* border: 1px solid black; */
-    /* height: 50px; */
-    /* test */
-
-
     width: 35%;
+}
+
+.my-navbar img{
+    width: 35px;
+    border-radius: 50%;
 }
 
 .my-navbar .my-nav-right{
     border: 1px solid rgba(000, 000, 000, 0.4);
 
-    /* border: 1px solid black; */
-    height: 50px;
-
+    
     /* test */
 
     width: 65%;
@@ -96,14 +94,7 @@ MAIN
 
 */
 
-.grandezza-test{
 
-    width: 100%;
-    height: 50px;
-    /* border: 1px solid black; */
-
-
-}
 .main{
 
     display: flex;
@@ -116,8 +107,8 @@ MAIN
 
 .my-side-bar{
     border: 1px solid rgba(000, 000, 000, 0.4);
-    height: 50px;
-    height: 550px;
+    
+    height: 650px;
 
     /* test */
 
@@ -131,6 +122,11 @@ MAIN
 
 .notice{
     background-color: #9FD8F8;
+}
+
+.contacts{
+    height: calc(650px - 54px - 54px - 50px + 40px);
+    overflow: scroll;
 }
 
 .contacts li img{
@@ -154,8 +150,8 @@ Main chat
 
 .my-main-block{
     /* border: 1px solid black; */
-    height: 50px;
-    height: 550px;
+    
+    height: 650px;
 
     /* test */
 
@@ -176,8 +172,25 @@ Main chat
 }
 
 .my-bg-user-chat{
-    background: url(../img/mine.jpg);
+    background-image: url(../img/mine.jpg);
 }
 
+.bg-my-answear{
+    background-color: #DCF8C0;
+}
 
+.bg-your-answear{
+    background-color: #FFFFFF;
+
+}
+
+.my-message{
+    overflow-wrap: break-word;
+
+}
+
+.your-message{
+    overflow-wrap: break-word;
+
+}
 
