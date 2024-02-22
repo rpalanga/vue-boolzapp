@@ -50,7 +50,11 @@
                     <div class="my-nav-right d-flex justify-content-between align-items-center p-2">
                         <div class="d-flex align-items-center gap-2" >
                             <img src="img/avatar_1.jpg" alt="">
-                            <div>Michele</div>
+                            <div>
+                                <div>Michele</div>
+                                <div>Ultimo accesso alle 12.00</div>
+
+                            </div>
                         </div>
 
                         <span class="p-2">
@@ -111,12 +115,16 @@
 
                     </div>
                     <div class="my-main-block d-flex flex-column justify-content-between  ">
-                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 ">
+                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 "
+                        v-if="(userMassege, index) in contacts"
+                        >
 
                             <div class="my-message d-flex justify-content-end me-3">
                                 <div class="my-answear bg-my-answear p-3 rounded-3  ">
-                                    <div>
-                                        
+                                    <div
+                                    v-if="(userMassege, index) in contacts.messages.message"
+                                    >
+                                        {{userMassege.massages}}
                                     </div>
                                     
                                 </div>

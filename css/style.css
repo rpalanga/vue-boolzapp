@@ -11,9 +11,9 @@
 */
 
 .my-back-ground{
-    border: 1px solid red;
+    /* border: 1px solid red;
+    max-width: 1200px; */
     /* test */
-    max-width: 1200px;
     height: 100vh;
 }
 
@@ -125,7 +125,7 @@ MAIN
 }
 
 .contacts{
-    height: calc(650px - 54px - 54px - 50px + 40px);
+    height: calc(650px - 54px - 54px - 50px + 30px);
     overflow: scroll;
 }
 
