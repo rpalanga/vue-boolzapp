@@ -185,7 +185,10 @@ Main chat
 
 }
 
-.sent{
+.container-message.sent{
+justify-content: end;
+}
+.message.sent{
     
     
     background-color: #DCF8C0;
@@ -194,6 +197,6 @@ Main chat
 
 
 
-.received{
+.message.received{
     background-color:white;
 }

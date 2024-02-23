@@ -118,12 +118,16 @@
                     <div class="my-main-block d-flex flex-column  ">
                         <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 ">
 
-                            <div class="message d-flex flex-column mb-3 p-3 rounded-3 me-3"
-                                v-for="currentMessage in activeContact.messages" :class="currentMessage.status">
+
+                            <div class="   d-flex  container-message"
+                                v-for="currentMessage in activeContact.messages" :class="currentMessage.status" >
+                                <div class=" message d-table p-3 mb-3 rounded-3 me-3"
+                                :class="currentMessage.status"
+                                 >
 
 
 
-                                <div>
+
 
                                     {{currentMessage.message}}
                                     <div>
@@ -132,8 +136,9 @@
 
                                     </div>
 
-
                                 </div>
+
+
 
 
 
