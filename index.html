@@ -36,7 +36,7 @@
                         <div class="d-flex align-items-center gap-2">
                             <img src="img/avatar_1.jpg" alt="">
                             <div>Michele</div>
-                            
+
                         </div>
 
 
@@ -48,7 +48,7 @@
                         </span>
                     </div>
                     <div class="my-nav-right d-flex justify-content-between align-items-center p-2">
-                        <div class="d-flex align-items-center gap-2" >
+                        <div class="d-flex align-items-center gap-2">
                             <img src="img/avatar_1.jpg" alt="">
                             <div>
                                 <div>Michele</div>
@@ -93,14 +93,15 @@
                         <div class="contacts ">
                             <ul class="p-0">
                                 <li class=" gap-3  d-flex align-items-center justify-content-between  border-bottom user-padding bg-white "
-                                    v-for="(currentUser, indexUser) in contacts">
-                                    
+                                    v-for="(currentUser, indexUser) in contacts"
+                                    @click="changeActiveContact(indexUser)">
+
                                     <img :src="currentUser.avatar" alt="" class="">
-                                    
+
                                     <div>
                                         {{currentUser.name}}
                                         <p><i>Ultimo messaggio mandato</i></p>
-                                        
+
                                     </div>
                                     <div>
                                         20.30
@@ -114,31 +115,38 @@
 
 
                     </div>
-                    <div class="my-main-block d-flex flex-column justify-content-between  ">
-                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 "
-                        
-                        >
+                    <div class="my-main-block d-flex flex-column  ">
+                        <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 ">
 
-                            <div class="my-message d-flex justify-content-end me-3">
-                                <div class="my-answear bg-my-answear p-3 rounded-3  ">
-                                    <div
-                                    v-for="currentMessage in activeContact.messages"
-                                    >
-                                        {{currentMessage.message}}
+                            <div class="message d-flex flex-column mb-3 p-3 rounded-3 me-3"
+                                v-for="currentMessage in activeContact.messages" :class="currentMessage.status">
+
+
+
+                                <div>
+
+                                    {{currentMessage.message}}
+                                    <div>
+
                                         {{currentMessage.date}}
+
                                     </div>
-                                    
+
+
                                 </div>
+
+
+
                             </div>
 
-                            <div class="your-message d-flex justify-content-start ms-3 ">
+                            <!-- <div class="your-message d-flex justify-content-start ms-3 ">
                                 <div class="your-answear bg-your-answear p-3 rounded-3 ">
                                     <div>
                                         Anvedi da quanto tempo
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -147,7 +155,8 @@
 
                             <i class="fa-regular fa-face-smile my-color-icon p-4"></i>
 
-                            <input class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
+                            <input class="form-control" type="text" placeholder="Scrivi un messaggio"
+                                aria-label="default input example">
 
                             <i class="fa-solid fa-microphone my-color-icon p-4"></i>
 

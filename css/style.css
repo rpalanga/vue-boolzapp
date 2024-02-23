@@ -175,22 +175,25 @@ Main chat
     background-image: url(../img/mine.jpg);
 }
 
-.bg-my-answear{
+
+
+
+
+
+.message{
+    overflow-wrap: break-word;
+
+}
+
+.sent{
+    
+    
     background-color: #DCF8C0;
-}
-
-.bg-your-answear{
-    background-color: #FFFFFF;
 
 }
 
-.my-message{
-    overflow-wrap: break-word;
 
+
+.received{
+    background-color:white;
 }
-
-.your-message{
-    overflow-wrap: break-word;
-
-}
-
