@@ -175,23 +175,55 @@ createApp({
 
             activeContact: {},
 
+            textMessage : "",
+
 
         }
     },
 
-    mounted(){
+    mounted() {
 
         this.activeContact = this.contacts[0]
 
     },
-   
-        methods: {
-            changeActiveContact(index) {
-                // this.activeContactIndex = index;
-                this.activeContact = this.contacts[index]
-            },
-        }
-    
+
+    methods: {
+        changeActiveContact(index) {
+            // this.activeContactIndex = index;
+            this.activeContact = this.contacts[index]
+        },
+        addMessage(){
+
+            const newMessage = {
+
+                date: new Date().toLocaleTimeString(),
+                message: this.textMessage,
+                status: 'sent'
+
+            }
+
+            this.activeContact.messages.push(newMessage)
+
+            this.textMessage = ""
+            
+            setTimeout(() => {
+
+                const pcMessege = {
+                    
+                    date: new Date().toLocaleTimeString(),
+                    message: "Ok",
+                    status: 'received'
+        
+                }
+                
+                this.activeContact.messages.push(pcMessege)
+
+            },1000)
+
+        },
+    }
+
+
 
 
 
