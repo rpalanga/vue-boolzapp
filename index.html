@@ -116,15 +116,16 @@
                     </div>
                     <div class="my-main-block d-flex flex-column justify-content-between  ">
                         <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 "
-                        v-if="(userMassege, index) in contacts"
+                        
                         >
 
                             <div class="my-message d-flex justify-content-end me-3">
                                 <div class="my-answear bg-my-answear p-3 rounded-3  ">
                                     <div
-                                    v-if="(userMassege, index) in contacts.messages.message"
+                                    v-for="currentMessage in activeContact.messages"
                                     >
-                                        {{userMassege.massages}}
+                                        {{currentMessage.message}}
+                                        {{currentMessage.date}}
                                     </div>
                                     
                                 </div>
