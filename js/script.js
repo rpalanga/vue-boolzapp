@@ -177,6 +177,10 @@ createApp({
 
             textMessage : "",
 
+            userName:"",
+
+            // actualIndex:"",
+
 
         }
     },
@@ -189,8 +193,11 @@ createApp({
 
     methods: {
         changeActiveContact(index) {
-            // this.activeContactIndex = index;
-            this.activeContact = this.contacts[index]
+           
+            const currentIndex = this.contacts.indexOf(this.filterName[index])
+            
+            
+            this.activeContact = this.contacts[currentIndex]
         },
         addMessage(){
 
@@ -221,7 +228,21 @@ createApp({
             },1000)
 
         },
-    }
+       
+    },
+
+    computed: {
+
+        filterName(){
+
+            return this.contacts.filter(currenUser => {
+
+                return currenUser.name.toLowerCase().includes(this.userName.toLowerCase())
+
+            });
+        }
+    },
+    
 
 
 
