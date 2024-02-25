@@ -239,9 +239,9 @@ createApp({
 
         filterName(){
 
-            return this.contacts.filter(currenUser => {
+            return this.contacts.filter(currentUser => {
 
-                return currenUser.name.toLowerCase().includes(this.userName.toLowerCase())
+                return currentUser.name.toLowerCase().includes(this.userName.toLowerCase())
 
             });
         }

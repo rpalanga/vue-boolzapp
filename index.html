@@ -88,9 +88,7 @@
                                         class="fa-solid fa-magnifying-glass"></i></button>
                                 <input type="text" class="form-control" placeholder="Cerca o inizia un nuova chat"
                                     aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                    v-model="userName"
-                                    
-                                    >
+                                    v-model="userName">
                             </div>
                         </div>
                         <div class="contacts ">
@@ -99,11 +97,17 @@
                                     v-for="(currentUser, indexUser) in filterName "
                                     @click="changeActiveContact(indexUser)">
 
-                                    <img :src="currentUser.avatar" alt="" class="">
 
-                                    <div>
-                                        {{currentUser.name}}
-                                        <p><i>Ultimo messaggio mandato</i></p>
+                                    <div class=" d-flex gap-2 align-items-center  ">
+
+                                        <img :src="currentUser.avatar" alt="" class=" h-100">
+
+                                        <div class="d-flex flex-column ">
+                                            {{currentUser.name}}
+                                            <p><i>{{currentUser.messages[currentUser.messages.length - 1].message}}</i></p>
+
+                                        </div>
+
 
                                     </div>
                                     <div>
@@ -123,21 +127,24 @@
 
 
                             <div class="   d-flex  container-message"
-                                v-for="(currentMessage, indexMessage) in activeContact.messages" :class="currentMessage.status" >
+                                v-for="(currentMessage, indexMessage) in activeContact.messages"
+                                :class="currentMessage.status">
 
 
-                                <div class=" message d-table p-3 mb-3 rounded-3 me-3"
-                                :class="currentMessage.status"
-                                 >
-                                 <div class="dropdown float-end  justify-content-end">
-                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" @click="deleteMassage(activeContact, indexMessage)">Delete Message</a></li>
-                                      
-                                    </ul>
-                                  </div>
+                                <div class=" message d-table p-3 mb-3 rounded-3 me-3" :class="currentMessage.status">
+                                    <div class="dropdown float-end  justify-content-end">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    @click="deleteMassage(activeContact, indexMessage)">Delete
+                                                    Message</a></li>
+
+
+                                        </ul>
+                                    </div>
 
 
 
@@ -157,7 +164,7 @@
 
                             </div>
 
-                           
+
 
 
                         </div>
@@ -166,13 +173,9 @@
 
                             <i class="fa-regular fa-face-smile my-color-icon p-4"></i>
 
-                            <input class="form-control"
-                            v-model="textMessage" 
-                            type="text" 
-                            placeholder="Scrivi un messaggio"
-                            aria-label="default input example"
-                            @keyup.enter="addMessage()"
-                            >
+                            <input class="form-control" v-model="textMessage" type="text"
+                                placeholder="Scrivi un messaggio" aria-label="default input example"
+                                @keyup.enter="addMessage()">
 
                             <i class="fa-solid fa-microphone my-color-icon p-4"></i>
 
