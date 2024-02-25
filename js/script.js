@@ -228,6 +228,10 @@ createApp({
             },1000)
 
         },
+        deleteMassage(currentMessage, indexMessage){
+
+            currentMessage.messages.splice(indexMessage, 1)
+        }
        
     },
 

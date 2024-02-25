@@ -123,11 +123,21 @@
 
 
                             <div class="   d-flex  container-message"
-                                v-for="currentMessage in activeContact.messages" :class="currentMessage.status" >
+                                v-for="(currentMessage, indexMessage) in activeContact.messages" :class="currentMessage.status" >
+
+
                                 <div class=" message d-table p-3 mb-3 rounded-3 me-3"
                                 :class="currentMessage.status"
                                  >
-
+                                 <div class="dropdown float-end  justify-content-end">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" @click="deleteMassage(activeContact, indexMessage)">Delete Message</a></li>
+                                      
+                                    </ul>
+                                  </div>
 
 
 
