@@ -202,6 +202,8 @@ createApp({
         },
         addMessage(){
 
+            if (this.textMassage != 0 && this.textMessage.trim()){
+
             const newMessage = {
 
                 date: new Date().toLocaleTimeString(),
@@ -228,6 +230,7 @@ createApp({
 
             },1000)
 
+            }
         },
         deleteMassage(currentMessage, indexMessage){
 
@@ -237,9 +240,11 @@ createApp({
             currentMessage.messages.splice(indexMessage, 1)
 
             console.log(this.activeContact.messages)
-        }
+        },
         // changeIcon(){
-            
+        //     if(textMassage.length > 0){
+        //         <font-awesome-icon :icon="['far', 'paper-plane']" />
+        //     }
         // }
        
     },
