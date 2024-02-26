@@ -175,9 +175,9 @@ createApp({
 
             activeContact: {},
 
-            textMessage : "",
+            textMessage: "",
 
-            userName:"",
+            userName: "",
 
             // actualIndex:"",
 
@@ -194,45 +194,49 @@ createApp({
 
     methods: {
         changeActiveContact(index) {
-           
+
             const currentIndex = this.contacts.indexOf(this.filterName[index])
-            
-            
+
+
             this.activeContact = this.contacts[currentIndex]
         },
-        addMessage(){
+        addMessage() {
 
-            if (this.textMassage != 0 && this.textMessage.trim()){
+            if (this.textMassage != 0 && this.textMessage.trim()) {
 
-            const newMessage = {
+                const newMessage = {
 
-                date: new Date().toLocaleTimeString(),
-                message: this.textMessage,
-                status: 'sent'
-
-            }
-
-            this.activeContact.messages.push(newMessage)
-
-            this.textMessage = ""
-            
-            setTimeout(() => {
-
-                const pcMessege = {
-                    
                     date: new Date().toLocaleTimeString(),
-                    message: "Ok",
-                    status: 'received'
-        
-                }
-                
-                this.activeContact.messages.push(pcMessege)
+                    message: this.textMessage,
+                    status: 'sent'
 
-            },1000)
+                }
+
+                this.activeContact.messages.push(newMessage)
+
+                this.textMessage = ""
+
+                this.showLastMessage()
+
+                setTimeout(() => {
+
+                    const pcMessege = {
+
+                        date: new Date().toLocaleTimeString(),
+                        message: "Ok",
+                        status: 'received'
+
+                    }
+
+                    this.activeContact.messages.push(pcMessege)
+                    this.showLastMessage()
+
+
+                }, 1000)
 
             }
         },
-        deleteMassage(currentMessage, indexMessage){
+        deleteMassage(currentMessage, indexMessage) {
 
             console.log(this.activeContact.messages)
 
@@ -241,17 +245,25 @@ createApp({
 
             console.log(this.activeContact.messages)
         },
-        // changeIcon(){
-        //     if(textMassage.length > 0){
-        //         <font-awesome-icon :icon="['far', 'paper-plane']" />
-        //     }
-        // }
        
+        showLastMessage() {
+            const targetRef = this.$refs.showLastMessage;
+            this.$nextTick(() => {
+                targetRef.scrollTo(
+                    {
+                        top: targetRef.scrollHeight,
+                        left: 0,
+                        behavior: "smooth"
+                    }
+                );
+            });
+        }
+
     },
 
     computed: {
 
-        filterName(){
+        filterName() {
 
             return this.contacts.filter(currentUser => {
 
@@ -260,7 +272,7 @@ createApp({
             });
         }
     },
-    
+
 
 
 
