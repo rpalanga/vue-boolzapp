@@ -55,7 +55,8 @@
                             <img :src="activeContact.avatar" alt="">
                             <div>
                                 <div> {{activeContact.name}}</div>
-                                <div>ultimo accesso {{activeContact.messages != undefined ? activeContact.messages[activeContact.messages.length - 1].date : ''}}</div>
+                                
+                                <div>ultimo accesso {{activeContact.messages != undefined ? (activeContact.messages.length > 0 ? activeContact.messages[activeContact.messages.length - 1].date : '') : ''}}</div>
 
                             </div>
                         </div>

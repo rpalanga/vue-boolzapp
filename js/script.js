@@ -188,6 +188,7 @@ createApp({
     mounted() {
 
         this.activeContact = this.contacts[0]
+        console.log(this.activeContact)
 
     },
 
@@ -230,7 +231,12 @@ createApp({
         },
         deleteMassage(currentMessage, indexMessage){
 
+            console.log(this.activeContact.messages)
+
+
             currentMessage.messages.splice(indexMessage, 1)
+
+            console.log(this.activeContact.messages)
         }
        
     },
