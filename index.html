@@ -34,7 +34,7 @@
 
                     <div class="my-nav-left d-flex justify-content-between align-items-center p-2">
                         <div class="d-flex align-items-center gap-2">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img src="img/avatar_io.jpg" alt="">
                             <div>Michele</div>
 
                         </div>
@@ -48,8 +48,13 @@
                         </span>
                     </div>
                     <div class="my-nav-right d-flex justify-content-between align-items-center p-2">
-                        <div class="d-flex align-items-center gap-2">
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div 
+                        class="d-flex align-items-center gap-2"
+                        v-for="(currentUser, indexUser) in filterName "
+                        @click="changeActiveContact(indexUser)"
+                        v-show=""
+                        >
+                            <img src="currentUser.avatar" alt="">
                             <div>
                                 <div>Michele</div>
                                 <div>Ultimo accesso alle 12.00</div>
@@ -91,6 +96,7 @@
                                     v-model="userName">
                             </div>
                         </div>
+                        <!-- lista contatti  -->
                         <div class="contacts ">
                             <ul class="p-0">
                                 <li class=" gap-3  d-flex align-items-center justify-content-between  border-bottom user-padding bg-white "
@@ -104,14 +110,15 @@
 
                                         <div class="d-flex flex-column ">
                                             {{currentUser.name}}
-                                            <p><i>{{currentUser.messages[currentUser.messages.length - 1].message}}</i></p>
+                                            <p><i>{{currentUser.messages[currentUser.messages.length - 1].message}}</i>
+                                            </p>
 
                                         </div>
 
 
                                     </div>
-                                    <div>
-                                        20.30
+                                    <div  class="d-flex flex-column ">
+                                        {{currentUser.messages[currentUser.messages.length - 1].date}}
                                     </div>
 
 
@@ -122,6 +129,9 @@
 
 
                     </div>
+
+                    <!-- chat principale -->
+
                     <div class="my-main-block d-flex flex-column  ">
                         <div class="my-user-chat my-high-vh w-100 my-bg-user-chat p-3 overflow-scroll ">
 
