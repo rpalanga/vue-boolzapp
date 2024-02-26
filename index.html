@@ -34,8 +34,8 @@
 
                     <div class="my-nav-left d-flex justify-content-between align-items-center p-2">
                         <div class="d-flex align-items-center gap-2">
-                            <img src="img/avatar_io.jpg" alt="">
-                            <div>Michele</div>
+                            <img src="img/avatar_4.jpg" alt="">
+                            <div>Roberto</div>
 
                         </div>
 
@@ -50,14 +50,12 @@
                     <div class="my-nav-right d-flex justify-content-between align-items-center p-2">
                         <div 
                         class="d-flex align-items-center gap-2"
-                        v-for="(currentUser, indexUser) in filterName "
-                        @click="changeActiveContact(indexUser)"
-                        v-show=""
+                        
                         >
-                            <img src="currentUser.avatar" alt="">
+                            <img :src="activeContact.avatar" alt="">
                             <div>
-                                <div>Michele</div>
-                                <div>Ultimo accesso alle 12.00</div>
+                                <div> {{activeContact.name}}</div>
+                                <div>ultimo accesso 12.00</div>
 
                             </div>
                         </div>
