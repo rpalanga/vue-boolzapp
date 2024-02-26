@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /* 
@@ -10,14 +11,38 @@
 
 */
 
-.my-back-ground{
+body {
     /* border: 1px solid red;
     max-width: 1200px; */
     /* test */
-    height: 100vh;
+    /* height: 100vh;
+    width: 100vw; */
+    
+    background-color: #DBDBD4;
+
+    
+
+
 }
 
-.my-container{
+.my-row-bg {
+    background-color: #429488;
+    height: 150px;
+    
+    position: relative;
+    
+
+}
+
+.my-container {
+
+   
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 150px;
+   right: 150px;
+    
     
     height: 700px;
 
@@ -32,7 +57,10 @@
 
     margin-top: 25px;
     margin-bottom: 25px;
+
     
+    
+
 }
 
 /* 
@@ -41,7 +69,7 @@ NAVBAR
 
 */
 
-.my-navbar{
+.my-navbar {
     width: 100%;
 
     background-color: #EAEAEA;
@@ -50,25 +78,25 @@ NAVBAR
 
 }
 
-.my-navbar .my-nav-left{
+.my-navbar .my-nav-left {
     border: 1px solid rgba(000, 000, 000, 0.4);
 
     width: 35%;
 }
 
-.my-navbar img{
+.my-navbar img {
     width: 35px;
     border-radius: 50%;
 }
 
-.my-navbar .my-nav-right{
+.my-navbar .my-nav-right {
     border: 1px solid rgba(000, 000, 000, 0.4);
 
-    
+
     /* test */
 
     width: 65%;
-    
+
 }
 
 /* 
@@ -77,11 +105,11 @@ NAVBAR
 
 */
 /* classi da riutilizzare */
-.user-padding{
+.user-padding {
     padding: 5px 10px;
 }
 
-.my-color-icon{
+.my-color-icon {
     color: #B1B1B1;
 }
 
@@ -95,7 +123,7 @@ MAIN
 */
 
 
-.main{
+.main {
 
     display: flex;
 
@@ -105,9 +133,9 @@ MAIN
 /* side bar */
 
 
-.my-side-bar{
+.my-side-bar {
     border: 1px solid rgba(000, 000, 000, 0.4);
-    
+
     height: 650px;
 
     /* test */
@@ -117,24 +145,24 @@ MAIN
 
 
     width: 35%;
-    
+
 }
 
-.notice{
+.notice {
     background-color: #9FD8F8;
 }
 
-.contacts{
+.contacts {
     height: calc(650px - 54px - 54px - 50px + 30px);
     overflow: scroll;
 }
 
-.contacts li img{
+.contacts li img {
     width: 35px;
     border-radius: 50%;
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -148,9 +176,9 @@ Main chat
 */
 
 
-.my-main-block{
+.my-main-block {
     /* border: 1px solid black; */
-    
+
     height: 650px;
 
     /* test */
@@ -160,18 +188,18 @@ Main chat
 
 
 
-.my-high-vh{
+.my-high-vh {
     height: calc(100vh - 64px);
 }
 
 
 
 
-.my-user-input-bg{
+.my-user-input-bg {
     background-color: #F2EEEA;
 }
 
-.my-bg-user-chat{
+.my-bg-user-chat {
     background-image: url(../img/mine.jpg);
 }
 
@@ -180,23 +208,28 @@ Main chat
 
 
 
-.message{
+.message {
     overflow-wrap: break-word;
 
 }
 
-.container-message.sent{
-justify-content: end;
+.container-message.sent {
+    justify-content: end;
 }
-.message.sent{
-    
-    
+
+.message.sent {
+
+
     background-color: #DCF8C0;
 
 }
 
 
 
-.message.received{
-    background-color:white;
+.message.received {
+    background-color: white;
+}
+
+.data-w{
+    font-size: 10px;
 }

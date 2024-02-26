@@ -238,6 +238,9 @@ createApp({
 
             console.log(this.activeContact.messages)
         }
+        // changeIcon(){
+            
+        // }
        
     },
 
