@@ -200,6 +200,9 @@ createApp({
 
             this.activeContact = this.contacts[currentIndex]
         },
+        // aggiungi messaggi
+        // risposta pc
+        
         addMessage() {
 
             if (this.textMassage != 0 && this.textMessage.trim()) {
@@ -232,10 +235,12 @@ createApp({
                     this.showLastMessage()
 
 
-                }, 1000)
+                }, 2000)
 
             }
         },
+        
+        // metodo per eliminare messaggio
         deleteMassage(currentMessage, indexMessage) {
 
             console.log(this.activeContact.messages)
@@ -245,6 +250,8 @@ createApp({
 
             console.log(this.activeContact.messages)
         },
+
+        // metodo per scrollare all'ultimo messaggio 
        
         showLastMessage() {
             const targetRef = this.$refs.showLastMessage;
